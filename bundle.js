@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -73,15 +73,19 @@
 
 	var _youtubeApiSearch2 = _interopRequireDefault(_youtubeApiSearch);
 
-	var _search_bar = __webpack_require__(176);
+	var _config = __webpack_require__(176);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	var _search_bar = __webpack_require__(177);
 
 	var _search_bar2 = _interopRequireDefault(_search_bar);
 
-	var _video_list = __webpack_require__(177);
+	var _video_list = __webpack_require__(178);
 
 	var _video_list2 = _interopRequireDefault(_video_list);
 
-	var _video_detail = __webpack_require__(179);
+	var _video_detail = __webpack_require__(180);
 
 	var _video_detail2 = _interopRequireDefault(_video_detail);
 
@@ -92,8 +96,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var YT_API_KEY = 'AIzaSyBNSN0VyilMYKG5JHBtZnuYgE9x4LxH82c';
 
 	var App = function (_Component) {
 	  _inherits(App, _Component);
@@ -117,7 +119,7 @@
 	    value: function searchVideo(term) {
 	      var _this2 = this;
 
-	      (0, _youtubeApiSearch2.default)({ key: YT_API_KEY, term: term }, function (videos) {
+	      (0, _youtubeApiSearch2.default)({ key: _config2.default.YT_API_KEY, term: term }, function (videos) {
 	        _this2.setState({
 	          videos: videos,
 	          selectedVideo: videos[0]
@@ -33171,6 +33173,16 @@
 
 /***/ }),
 /* 176 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	module.exports = {
+		"YT_API_KEY": "AIzaSyBNSN0VyilMYKG5JHBtZnuYgE9x4LxH82c"
+	};
+
+/***/ }),
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*jshint esversion: 6 */
@@ -33238,7 +33250,7 @@
 	exports.default = SearchBar;
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33251,7 +33263,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _video_list_item = __webpack_require__(178);
+	var _video_list_item = __webpack_require__(179);
 
 	var _video_list_item2 = _interopRequireDefault(_video_list_item);
 
@@ -33277,7 +33289,7 @@
 	exports.default = VideoList;
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -33327,7 +33339,7 @@
 	exports.default = VideoListItem;
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
