@@ -1,3 +1,13 @@
+# ArcGIS GeoDev Academy
+
+## Install
+Download the code and run npm install
+
+## Run
+* Development mode: `$npm start`
+* Build production code: `$npm run build`
+
+## Other
 Clickacble progress bar (from http://stackoverflow.com/questions/28311631/determine-click-position-on-progress-bar)
 http://jsfiddle.net/36rek2rh/
 
