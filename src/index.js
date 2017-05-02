@@ -6,11 +6,11 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search'
+import Config from './config.json';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
-const YT_API_KEY = 'AIzaSyBNSN0VyilMYKG5JHBtZnuYgE9x4LxH82c';
 
 class App extends Component{
   constructor(props) {
@@ -25,7 +25,8 @@ class App extends Component{
   }
 
   searchVideo(term){
-    YTSearch({key: YT_API_KEY, term: term}, (videos) => {
+    
+    YTSearch({key: Config.YT_API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
