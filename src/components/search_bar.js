@@ -2,14 +2,24 @@
 
 'use strict';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 
-const SearchBar = () => {
+class SearchBar extends Component {
+  constructor(props){
+    super(props);
 
-  return (
-    <input />
-  );
+    this.state = { term: '' };
+  }
+
+  render(){
+    return (
+      <div className="search-bar">
+        <input
+          value={this.state.term}
+          onChange={event => this.setState({ term: event.target.value }) }/>
+      </div>
+    );
+  }
 
 };
 
